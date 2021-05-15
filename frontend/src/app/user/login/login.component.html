@@ -1,0 +1,44 @@
+<!-- <p>login works!</p> -->
+<!-- <div class="form-wrrap">
+  <h3>User Login</h3>
+  <form [formGroup]="loginForm" (ngSubmit)="userLogin()">
+    <input
+      type="email"
+      placeholder="Enter Your Email"
+      formControlName="email"
+    />
+    <input
+      type="password"
+      placeholder="Enter Your Password"
+      formControlName="password"
+    />
+    <input type="submit" value="Login" [disabled]="!loginForm.valid" />
+  </form>
+</div> -->
+
+
+
+
+<form [formGroup]="loginForm" (ngSubmit)="userLogin()">
+  <h1>Employer Log in</h1>
+  <div class="inset">
+  <p>
+    <label for="email">EMAIL ADDRESS</label>
+    <input
+    type="text"
+    placeholder="Enter Your Email"
+    formControlName="email"
+  />  </p>
+  <p>
+    <label for="password">PASSWORD</label>
+    <input
+    type="password"
+    placeholder="Enter Your Password"
+    formControlName="password"
+  />  </p>
+
+  </div>
+  <p class="p-container">
+    <input type="submit" value="Login" [disabled]="!loginForm.valid" />
+  </p>
+</form>

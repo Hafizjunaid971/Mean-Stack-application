@@ -1,0 +1,105 @@
+<!-- <nav>
+  <h3>MY APP</h3>
+  <ul class="main-menu">
+    <li><a routerLink="/listings">Employe</a></li>
+    <li *ngIf="userService.loggedIn()">
+      <a routerLink="listings/add-listing">Add Employe</a>
+    </li>
+    <li *ngIf="!userService.loggedIn()">
+      <a routerLink="user/login">Login</a>
+    </li>
+    <li *ngIf="!userService.loggedIn()">
+      <a routerLink="user/register">Register</a>
+    </li>
+
+    <li *ngIf="userService.loggedIn()">
+      <a style="cursor: pointer" (click)="userService.logOut()">Log Out</a>
+    </li>
+  </ul>
+</nav> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Junaid</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/listings">Employe</a></li>
+        <li class="nav-item" *ngIf="userService.loggedIn()">
+          <a class="nav-link" routerLink="listings/add-listing">Add Employe</a>
+        </li>
+        <li class="nav-item" *ngIf="!userService.loggedIn()">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item" *ngIf="!userService.loggedIn()">
+          <a class="nav-link" routerLink="user/customer">customer</a>
+        </li>
+        <li class="nav-item" *ngIf="!userService.loggedIn()">
+          <a class="nav-link" routerLink="user/login">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="!userService.loggedIn()">
+          <a class="nav-link" routerLink="user/register">Register</a>
+        </li>
+        <li class="nav-item" *ngIf="userService.loggedIn()">
+          <a class="nav-link" style="cursor: pointer" (click)="userService.logOut()">Log Out</a>        </li><li class="nav-item">
+             </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+<div class="bg-warning">
+
+
+
+
+<div class="container">
+
+  <div class="row">
+  <div class="col-sm">
+  <h2 style="color: darkmagenta;font-family:Times New Roman, Times, serif; ">Contact Us</h2><br>
+  <p  class="contact">North karachi</p>
+  <p class="contact">New karachi </p>
+  <p class="contact">+92 3122229164</p>
+  <p class="contact">Hafizjunaid971@gmail.com</p>
+  </div>
+    <div class="col-sm">
+      <h2 style="color:darkmagenta; font-family:Times New Roman, Times, serif; ">About Us</h2><br>
+      <li style="display: block;color:black"><a href="#" style="color:black">Home</a></li>
+      <li style="display: block;color:black"><a href="#" style="color:black">Contact</a></li>
+      <li style="display: block;color:black"><a href="#" style="color:black">Register</a></li>
+    </div>
+      <div class="col-sm">
+      <h2 style="color:darkmagenta;font-family:Times New Roman, Times, serif; ">Social Media Link</h2><br>
+      <ul class="list-unstyled">
+          <li><a href="https://www.facebook.com/hafizjunaid971/" target="_blank"> <i style="color:black" class="fab fa-facebook-f"target="_blank"> </i></a>&nbsp;&nbsp; &nbsp;
+          <a href="https://twitter.com/hafizjunaid971" target="_blank"> <i style="color:black" class="fab fa-twitter" target="_blank"> </i></a>  &nbsp;&nbsp;&nbsp;
+          <a href="https://www.linkedin.com/in/hafiz-junaid-118984a0/" target="_blank"> <i style="color:black" class="fab fa-linkedin" target="_blank"> </i></a>  &nbsp; &nbsp;&nbsp;
+          <a href="https://github.com/Hafizjunaid971" target="_blank"> <i style="color:black" class="fab fa-github" target="_blank"> </i></a> &nbsp; &nbsp;&nbsp;
+          <a href="https://www.youtube.com/channel/UCx-PjRtOS5sVPYQ3ABmn89A" target="_blank"> <i style="color:black" class="fab fa-youtube"> </i></a>  </li>
+          </ul>
+    </div>
+      <div class="col-sm">
+      <h2 style="color: darkmagenta;font-family:Times New Roman, Times, serif; ">Portfolio Link </h2><br>
+      <a href="https://personalportfolio-eff17.web.app/" target="_blank" style="color:black">Hafiz Junaid Ahmed</a>  &nbsp;&nbsp;&nbsp;
+    </div>
+
+</div>
+</div></div>
+<footer>
+  <div style="background-color: orange;color: white; height: 40px;">
+
+
+    <h1 style="text-align: center;font-size:20px; ">Copyright ©2021 All rights reserved | Hafiz Junaid Ahmed Ansari</h1>
+
+
+    </div>
+
+
+</footer>

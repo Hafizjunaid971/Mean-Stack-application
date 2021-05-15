@@ -1,0 +1,21 @@
+
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <!-- <th>Phone</th> -->
+      </tr>
+    </thead>
+    <tbody class="users" *ngIf="user$ | async as users">
+      <tr *ngFor="let user of users;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <!-- <td><button class="btn  btn-success">View Details</button></td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>

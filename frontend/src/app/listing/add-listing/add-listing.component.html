@@ -1,0 +1,17 @@
+<!-- <p>add-listing works!</p> -->
+<div class="form-wrrap">
+  <h3>Add New Items</h3>
+  <form [formGroup]="listingForm" (ngSubmit)="newListing()">
+    <input type="text" placeholder="Enter name" formControlName="title" />
+    <input type="text" placeholder="Enter City" formControlName="price" />
+    <input
+      type="text"
+      placeholder="Enter Email"
+      formControlName="locality"
+    />
+    <input type="text" placeholder="Enter Phone Number" formControlName="details" />
+    <input type="submit" value="Add new Data" [disabled]="!listingForm.valid" />
+  </form>
+</div>
+
+

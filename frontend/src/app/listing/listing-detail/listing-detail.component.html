@@ -1,0 +1,92 @@
+<!-- <p>listing-detail works!</p>
+<div class="info-wrrap">
+  <h4>{{ listing.title }}</h4>
+  <h5>Price: {{ listing.price }} | Locality: {{ listing.locality }}</h5>
+  <p>Details: {{ listing.details }}</p>
+</div> -->
+
+<!-- <div class="info-wrrap">
+  <h4>{{ listing.title }}</h4>
+  <h5>Price: {{ listing.price }} | Locality: {{ listing.locality }}</h5>
+  <p>Details: {{ listing.details }}</p>
+  <button *ngIf="userService.loggedIn()" (click)="showEdit()">Edit</button>
+  <button
+    *ngIf="userService.loggedIn()"
+    class="btn-delete"
+    (click)="removeListing()"
+  >
+    Delete
+  </button></div>
+ -->
+
+ <div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>I D</th>
+        <th>FirstName</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Phone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{listing._id}}</td>
+        <td>{{ listing.title }}</td>
+        <td>{{ listing.price }}</td>
+        <td>{{ listing.locality }}</td>
+        <td>{{ listing.details }}</td>
+        <td> <button *ngIf="userService.loggedIn()" (click)="showEdit()" class="btn btn-info">Edit</button>
+
+        <button
+          *ngIf="userService.loggedIn()"
+          class="btn-delete"
+          (click)="removeListing()"
+class="btn btn-danger">
+          Delete
+        </button>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+<div class="form-wrrap" *ngIf="showForm">
+  <h3>Edit Form</h3>
+  <form [formGroup]="editListingForm" (ngSubmit)="editListing()">
+    <input
+      type="text"
+      placeholder="Enter Title"
+      [(ngModel)]="listing.title"
+      formControlName="title"
+    />
+    <input
+      type="text"
+      placeholder="Enter Price"
+      [(ngModel)]="listing.price"
+      formControlName="price"
+    />
+    <input
+      type="text"
+      placeholder="Enter Locality"
+      [(ngModel)]="listing.locality"
+      formControlName="locality"
+    />
+    <input
+      type="text"
+      placeholder="Enter Details"
+      [(ngModel)]="listing.details"
+      formControlName="details"
+    />
+    <input
+      type="submit"
+      value="Add Data"
+      [disabled]="!editListingForm.valid"
+    />
+  </form>
+</div>

@@ -1,0 +1,32 @@
+<!-- <h1>listig compinents workk</h1> -->
+<!-- <ul class="listings" *ngIf="listings$ | async as listings">
+  <li *ngFor="let listing of listings">
+    <h4>{{ listing.title }}</h4>
+    <h5>Price: {{ listing.price }} | Locality: {{ listing.locality }}</h5>
+    <a [routerLink]="listing._id">View Details</a>
+  </li>
+</ul>
+ -->
+ <input type="text"  [(ngModel)]="name"/>
+ <div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>City</th>
+        <th>Email</th>
+        <!-- <th>Phone</th> -->
+      </tr>
+    </thead>
+    <tbody class="listings" *ngIf="listings$ | async as listings">
+      <tr *ngFor="let listing of listings; let i=index">
+        <td>{{i + 1}}</td>
+        <td>{{ listing.title }}</td>
+        <td>{{ listing.price }}</td>
+        <td>{{ listing.locality }}</td>
+        <td><a [routerLink]="listing._id"><button class="btn  btn-success">View Details</button></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
